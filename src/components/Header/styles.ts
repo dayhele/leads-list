@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const Section = styled.div`
   width: 100%;
   height: auto;
+  margin-bottom: 2.5rem;
 `;
 
 export const HeroContent = styled.div`
@@ -25,10 +26,16 @@ export const Subtitle = styled.h2`
   color: ${(props) => props.theme.palette.black};
 `;
 
+export const Filter = styled.div `
+  display: flex;
+  flex-direction: row;
+`;
+
 export const SearchBar = styled.input`
   width: 27rem;
+  height: 2.65rem;
   padding: 0.98em;
-  margin: 1.5rem 0 1rem 5.75rem;
+  margin: 1.5rem 0 0 5.75rem;
   color: ${(props) => props.theme.palette.gray};
   border: 1px solid ${(props) => props.theme.palette.gray};
   border-radius: 8px;
@@ -37,6 +44,7 @@ export const SearchBar = styled.input`
 
 export const SearchFilter = styled.input`
   width: 12rem;
+  height: 2.65rem;
   padding: 0.98em;
   margin: 1.5rem;
   color: ${(props) => props.theme.palette.gray};
