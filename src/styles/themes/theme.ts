@@ -9,7 +9,7 @@ const theme = {
   },
   fonts: {
     primary: 'Inter, sans-serif',
-    secondary: 'Baloo Da 2, cursive',
+    secondary: 'Lato, sans-serif',
   }
 }
 
