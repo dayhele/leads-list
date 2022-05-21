@@ -6,9 +6,12 @@ export default function Header() {
       <S.HeroContent>
         <S.Title>VOUGH</S.Title>
         <S.Subtitle>
-        Potencial leads plataform.
+        Potencial leads list.
         </S.Subtitle>
       </S.HeroContent>
+      <S.SearchBar type="text" placeholder="&#xF002; Search">
+      </S.SearchBar>
+      <S.SearchFilter type="text" placeholder="&#xf0b0; Filter"></S.SearchFilter>
     </S.Section>
   );
 }
