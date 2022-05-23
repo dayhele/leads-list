@@ -39,7 +39,7 @@ export const OptionsBox = styled.fieldset`
   border: 1px solid ${(props) => props.theme.palette.gray};
   border-radius: 0.75rem;
   box-shadow: 0px 4px 4px ${(props) => props.theme.palette.shadow};
-  background-color: ${(props) => props.theme.palette.white};
+  background-color: #fff;
 
   @media (max-width: 842px) {
      width: 16rem;

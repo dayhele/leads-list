@@ -102,15 +102,15 @@ export default function List() {
                 <S.ThList>Phone Number</S.ThList>
               </Tr>
             </S.TheadList>
-            <S.TbodyList>
+            <S.TbodyList >
               {filteredLeads &&
                 filteredLeads.map((lead: any) => (
-                  <S.TrList>
+                  <S.TrList key={lead.id}>
                     <S.TdList>{lead.name}</S.TdList>
                     <S.TdList>{lead.company.name}</S.TdList>
                     <S.TdList>
                       {lead.company.bs.split(" ").map((category: string) => (
-                        <S.Category>{category}</S.Category>
+                        <S.Category key={category}>{category}</S.Category>
                       ))}
                     </S.TdList>
                     <S.TdList>{lead.email}</S.TdList>

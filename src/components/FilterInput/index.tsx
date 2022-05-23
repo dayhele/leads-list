@@ -49,7 +49,7 @@ export default function FilterInput(props: any) {
             <S.OptionsTitle>Filters</S.OptionsTitle>
             <S.OptionsCategory>Category</S.OptionsCategory>
             {categoryArray.map((category) => (
-              <S.Option>
+              <S.Option key={category}>
                 <input
                   onChange={handleChange}
                   type="checkbox"

@@ -5,7 +5,7 @@ export default function Header() {
     <S.Section>
       <S.HeroContent>
         <S.Title>VOUGH</S.Title>
-        <S.Subtitle>Potencial leads list.</S.Subtitle>
+        <S.Subtitle>Potential leads list.</S.Subtitle>
       </S.HeroContent>
     </S.Section>
   );
