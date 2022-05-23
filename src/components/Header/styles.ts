@@ -11,6 +11,12 @@ export const HeroContent = styled.div`
   flex-direction: column;
   justify-content: start;
   margin: 2.75rem 5.75rem 0;
+
+  @media (max-width: 640px) {
+     justify-content: center;
+     align-items: center;
+     align-content: center;
+  }
 `;
 
 export const Title = styled.h1`
@@ -24,9 +30,4 @@ export const Subtitle = styled.h2`
   font-weight: 500;
   font-size: 1rem;
   color: ${(props) => props.theme.palette.black};
-`;
-
-export const Filter = styled.div `
-  display: flex;
-  flex-direction: row;
 `;

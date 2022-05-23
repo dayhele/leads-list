@@ -4,6 +4,17 @@ import { ChangeEvent, useState } from "react";
 export default function FilterInput(props: any) {
   const [optionsState, setOptionsState]: any = useState(false);
   const formValue: any = [];
+  const categoryArray: string[] = [];
+
+  props.data.forEach((lead: any) => {
+    const leadCategories = lead.company.bs.split(" ");
+
+    leadCategories.forEach((category: string) => {
+      if (!categoryArray.includes(category)) {
+        categoryArray.push(category);
+      }
+    });
+  });
 
   const toggleOptionsBox = (e: React.MouseEvent<HTMLInputElement>) => {
     setOptionsState(!optionsState);
@@ -22,7 +33,7 @@ export default function FilterInput(props: any) {
 
   const saveOptions = (e: React.SyntheticEvent) => {
     e.preventDefault();
-    console.dir(e.target as HTMLInputElement);
+    props.getFilterValue(formValue);
   };
 
   return (
@@ -37,36 +48,18 @@ export default function FilterInput(props: any) {
             <S.OptionAction type="submit">Save View</S.OptionAction>
             <S.OptionsTitle>Filters</S.OptionsTitle>
             <S.OptionsCategory>Category</S.OptionsCategory>
-            <S.Option>
-              <input
-                onChange={handleChange}
-                type="checkbox"
-                name="First"
-                id="First"
-                value="First"
-              />
-              <S.OptionLabel htmlFor="First">Enter (2)</S.OptionLabel>
-            </S.Option>
-            <S.Option>
-              <input
-                onChange={handleChange}
-                type="checkbox"
-                name="Second"
-                id="Second"
-                value='Second'
-              />
-              <S.OptionLabel htmlFor="Second">Enter (2)</S.OptionLabel>
-            </S.Option>
-            <S.Option>
-              <input
-                onChange={handleChange}
-                type="checkbox"
-                name="Third"
-                id="Third"
-                value='Third'
-              />
-              <S.OptionLabel htmlFor="Third">Enter (2)</S.OptionLabel>
-            </S.Option>
+            {categoryArray.map((category) => (
+              <S.Option>
+                <input
+                  onChange={handleChange}
+                  type="checkbox"
+                  name={category}
+                  id={category}
+                  value={category}
+                />
+                <S.OptionLabel htmlFor={category}>{category}</S.OptionLabel>
+              </S.Option>
+            ))}
           </S.OptionsBox>
         </>
       )}

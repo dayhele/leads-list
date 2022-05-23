@@ -3,14 +3,13 @@ import * as S from "./styles";
 
 export default function SearchInput(props: any) {
   const getInputValue = (e: KeyboardEvent): void => {
-    props.getValue((e.target as HTMLInputElement).value);
+    props.getSearchValue((e.target as HTMLInputElement).value);
   };
-
 
   return (
     <S.SearchBar
       type="text"
-      placeholder="&#xF002; Search"
+      placeholder="&#xF002; Search by name"
       onKeyUp={getInputValue}
     />
   );

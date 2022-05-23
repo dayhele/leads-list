@@ -3,27 +3,36 @@ import { Table, Thead, Tbody, Tr, Th, Td } from "react-super-responsive-table";
 
 export const Section = styled.section`
   width: 100%;
-  height: 100%;
 `;
 
 export const FiltersContainer = styled.div`
   display: flex;
   justify-content: flex-start;
+  flex-direction: row;
   align-items: center;
   gap: 0px 24px;
+
+  @media (max-width: 842px) {
+     flex-direction: column;
+  }
 `;
 
 export const LeadsListContent = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
+  min-height: 600px;
 `;
 
 export const LeadsListTitle = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: start;
-  margin: 0 0 3.8rem 5.75rem;
+  margin: 4rem 0 3.8rem 5.75rem;
+
+  @media (max-width: 842px) {
+     margin: 2.6rem 2rem;
+  }
 `;
 
 export const Title = styled.h1`
@@ -47,26 +56,32 @@ export const Counter = styled.p`
   color: ${(props) => props.theme.palette.white};
 `;
 
-export const TableCustom = styled(Table)`
+export const TableList = styled(Table)`
   border-spacing: 0;
+  margin-bottom: 3rem;
 `;
 
-export const TheadCustom = styled(Thead)`
+export const TheadList = styled(Thead)`
   color: ${(props) => props.theme.palette.lightBlue};
   font-weight: 700;
   font-size: 0.85rem;
 `;
 
-export const TdCustom = styled(Td)`
+export const TdList = styled(Td)`
   text-align: center;
   padding: 0.88rem 0;
   font-size: 0.88rem;
   font-weight: 500;
   flex-wrap: wrap;
+
 `;
 
-export const TrCustom = styled(Tr)`
+export const TrList = styled(Tr)`
   text-align: center;
+
+  @media screen and (max-width: 40em) {
+    border: none !important;
+  }
 
   td:nth-child(3) {
     display: flex;
@@ -79,13 +94,13 @@ export const TrCustom = styled(Tr)`
   }
 `;
 
-export const TbodyCustom = styled(Tbody)`
+export const TbodyList = styled(Tbody)`
   tr:nth-child(even) {
     background-color: ${(props) => props.theme.palette.veryLightBlue};
   }
 `;
 
-export const ThCustom = styled(Th)`
+export const ThList = styled(Th)`
   padding: 0.88rem 0;
 `;
 
@@ -96,4 +111,5 @@ export const Category = styled.p`
   color: ${(props) => props.theme.palette.white};
   padding: 0.35rem 0.5rem;
   margin: 0.24rem;
+  text-transform: capitalize;
 `;

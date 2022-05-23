@@ -8,7 +8,7 @@ export const SearchFilter = styled.p`
   display: flex;
   align-items: center;
   font-weight: 200;
-  font-size: 14px;
+  font-size: 0.88rem;
   width: 12rem;
   height: 2.65rem;
   padding: 0 0.98em;
@@ -17,6 +17,10 @@ export const SearchFilter = styled.p`
   border-radius: 8px;
   font-family: FontAwesome, ${(props) => props.theme.fonts.primary};
   cursor: pointer;
+
+  @media (max-width: 842px) {
+     width: 16rem;
+  }
 `;
 
 export const OptionsBox = styled.fieldset`
@@ -36,6 +40,10 @@ export const OptionsBox = styled.fieldset`
   border-radius: 0.75rem;
   box-shadow: 0px 4px 4px ${(props) => props.theme.palette.shadow};
   background-color: ${(props) => props.theme.palette.white};
+
+  @media (max-width: 842px) {
+     width: 16rem;
+  }
 `;
 
 export const OptionsTitle = styled.legend`
@@ -69,6 +77,7 @@ export const OptionLabel = styled.label<Props>`
   color: ${(props) => props.theme.palette.black};
   font-size: 12px;
   margin-left: 6px;
+  text-transform: capitalize;
 `;
 
 export const OptionAction = styled.button`
