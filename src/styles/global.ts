@@ -1,4 +1,4 @@
-import {createGlobalStyle} from 'styled-components'
+import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
    *{
@@ -8,4 +8,23 @@ export const GlobalStyle = createGlobalStyle`
        box-sizing: border-box;
        font-family: ${(props) => props.theme.fonts.primary};
    }
-`
+
+   html {
+    position: relative;
+    min-height: 100%;
+   }
+
+   body {
+       height: 100vh;
+   }
+
+   .App {
+       display: flex;
+       flex-direction: column;
+       justify-content: space-between;
+   }
+
+   #root, .App {
+       height: 100%;
+   }
+`;

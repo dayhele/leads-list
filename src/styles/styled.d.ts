@@ -6,10 +6,12 @@ declare module 'styled-components' {
     palette: {
     primary: string;
     lightBlue: string;
+    veryLightBlue: string;
     black: string;
     lightGray: string;
     gray: string;
     white: string;
+    shadow: string;
   },
   fonts: {
     primary: string;

@@ -1,9 +1,16 @@
 import styled from "styled-components";
 import { Table, Thead, Tbody, Tr, Th, Td } from "react-super-responsive-table";
 
-export const Section = styled.div`
+export const Section = styled.section`
   width: 100%;
-  height: auto;
+  height: 100%;
+`;
+
+export const FiltersContainer = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0px 24px;
 `;
 
 export const LeadsListContent = styled.div`
@@ -41,11 +48,7 @@ export const Counter = styled.p`
 `;
 
 export const TableCustom = styled(Table)`
-  /* display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  align-items: center;
-  width: 900px; */
+  border-spacing: 0;
 `;
 
 export const TheadCustom = styled(Thead)`
@@ -56,14 +59,41 @@ export const TheadCustom = styled(Thead)`
 
 export const TdCustom = styled(Td)`
   text-align: center;
+  padding: 0.88rem 0;
+  font-size: 0.88rem;
+  font-weight: 500;
+  flex-wrap: wrap;
 `;
 
 export const TrCustom = styled(Tr)`
   text-align: center;
+
+  td:nth-child(3) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  th:nth-child(3) {
+    max-width: 600px;
+  }
 `;
 
 export const TbodyCustom = styled(Tbody)`
   tr:nth-child(even) {
-    background-color: ${(props) => props.theme.palette.lightGray};
+    background-color: ${(props) => props.theme.palette.veryLightBlue};
   }
+`;
+
+export const ThCustom = styled(Th)`
+  padding: 0.88rem 0;
+`;
+
+export const Category = styled.p`
+  background-color: ${(props) => props.theme.palette.primary};
+  border-radius: 0.56rem;
+  font-size: 0.75rem;
+  color: ${(props) => props.theme.palette.white};
+  padding: 0.35rem 0.5rem;
+  margin: 0.24rem;
 `;
