@@ -1,6 +1,6 @@
 # VOUGH - Potential leads list 📈
 
-This tool was created with the aim of listing potential leads consuming the API (https://jsonplaceholder.typicode.com/users). <br>
+This tool was created with the objetive of listing potential leads consuming the API (https://jsonplaceholder.typicode.com/users). <br>
 You can check the layout I developed in Figma here: [Behance](https://www.behance.net/dayhele). <br> To view the application working, access this link: https://leads-list.vercel.app/.
 
 ## Technologies 👩🏻‍💻
